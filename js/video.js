@@ -5,17 +5,9 @@ window.addEventListener("load", function() {
     video = document.querySelector("#player1");
     video.autoplay = false;
     video.loop = false;
-
-    updateVolume();
-
     console.log('auto play is set to ' + video.autoplay);
     console.log('loop is set to ' + video.loop);
 });
-
-function updateVolume() {
-    var volumeDisplay = document.querySelector("#volume");
-    volumeDisplay.textContent = Math.round(video.volume * 100) + "%";
-}
 
 document.querySelector("#play").addEventListener("click", function() {
     console.log("Play Video");
@@ -24,6 +16,10 @@ document.querySelector("#play").addEventListener("click", function() {
     updateVolume();
 });
 
+function updateVolume() {
+    var volumeDisplay = document.querySelector("#volume");
+    volumeDisplay.textContent = Math.round(video.volume * 100) + "%";
+}
 
 document.querySelector("#pause").addEventListener("click", function() {
 	console.log("Pause Video");
