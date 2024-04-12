@@ -70,9 +70,9 @@ function updateVolume() {
 }
 
 document.querySelector("#vintage").addEventListener("click", function() {
-    video.classList.toggle("oldSchool");
+    var videoElement = document.querySelector("#player1");
+    videoElement.classList.add("oldSchool");
 });
-
 document.querySelector("#orig").addEventListener("click", function() {
     video.classList.remove("oldSchool");
 });
